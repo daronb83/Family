@@ -1,0 +1,1625 @@
+Nov 17, 2017 2:27:56 PM fox.glass.com.familyserver.Server initializeServer
+INFO: Initializing HTTP Server
+Nov 17, 2017 2:27:56 PM fox.glass.com.familyserver.Server initializeServer
+INFO: Finished Initialization
+Nov 17, 2017 2:27:56 PM fox.glass.com.familyserver.Server createContexts
+INFO: Creating contexts
+Nov 17, 2017 2:27:56 PM fox.glass.com.familyserver.Server createContexts
+INFO: Finished creating contexts
+Nov 17, 2017 2:27:56 PM fox.glass.com.familyserver.Server startServer
+INFO: Starting server
+Nov 17, 2017 2:27:56 PM fox.glass.com.familyserver.Server startServer
+WARNING: Server started
+
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.handlers.LoginHandler handle
+INFO: Entering LoginHandler
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.handlers.Handler isPostRequest
+INFO: Request method: POST
+Nov 17, 2017 2:29:05 PM fox.glass.com.shared.json.JsonDecoder decodeStream
+INFO: Decoding json stream
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.handlers.Handler processRequest
+INFO: Processing request
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.services.LoginService login
+INFO: Entering LoginService
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.database.Database openConnection
+INFO: Opening database connection
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.database.access.UserDAO login
+INFO: Entering UDAO login: Username: Phineas Password: flynn
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.database.access.UserDAO login
+SEVERE: ResultSet closed
+java.sql.SQLException: ResultSet closed
+	at org.sqlite.RS.checkOpen(RS.java:63)
+	at org.sqlite.RS.markCol(RS.java:77)
+	at org.sqlite.RS.getString(RS.java:313)
+	at fox.glass.com.familyserver.database.access.UserDAO.login(UserDAO.java:89)
+	at fox.glass.com.familyserver.services.Service.getUser(Service.java:168)
+	at fox.glass.com.familyserver.services.LoginService.login(LoginService.java:23)
+	at fox.glass.com.familyserver.services.LoginService.getResponse(LoginService.java:57)
+	at fox.glass.com.familyserver.handlers.Handler.processRequest(Handler.java:117)
+	at fox.glass.com.familyserver.handlers.LoginHandler.handle(LoginHandler.java:24)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:79)
+	at sun.net.httpserver.AuthFilter.doFilter(AuthFilter.java:83)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at sun.net.httpserver.ServerImpl$Exchange$LinkHandler.handle(ServerImpl.java:675)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:79)
+	at sun.net.httpserver.ServerImpl$Exchange.run(ServerImpl.java:647)
+	at sun.net.httpserver.ServerImpl$DefaultExecutor.execute(ServerImpl.java:158)
+	at sun.net.httpserver.ServerImpl$Dispatcher.handle(ServerImpl.java:431)
+	at sun.net.httpserver.ServerImpl$Dispatcher.run(ServerImpl.java:396)
+	at java.lang.Thread.run(Thread.java:745)
+
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.services.Service getUser
+WARNING: Request property missing or has invalid value
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.services.LoginService login
+INFO: LoginService failed: Request property missing or has invalid value
+Nov 17, 2017 2:29:05 PM fox.glass.com.shared.json.JsonEncoder encodeToStream
+INFO: Encoding json stream
+Nov 17, 2017 2:29:05 PM fox.glass.com.shared.json.JsonEncoder encodeToStream
+INFO: Finished encoding stream
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.handlers.Handler processRequest
+INFO: Request processed successfully
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.handlers.LoginHandler handle
+INFO: Leaving LoginHandler
+
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.handlers.PersonHandler handle
+INFO: Entering PersonHandler
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.handlers.Handler isGetRequest
+INFO: Request method: GET
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.handlers.Handler getAuthTokenValue
+INFO: AuthToken: 
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.handlers.Handler getUriParts
+INFO: URI: /person
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.handlers.Handler processRequest
+INFO: Processing request
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.database.Database openConnection
+INFO: Opening database connection
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.services.Service getUserByTokenValue
+WARNING: Invalid auth token
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.services.PeopleService getPeople
+WARNING: PeopleService failed: Invalid auth token
+Nov 17, 2017 2:29:05 PM fox.glass.com.shared.json.JsonEncoder encodeToStream
+INFO: Encoding json stream
+Nov 17, 2017 2:29:05 PM fox.glass.com.shared.json.JsonEncoder encodeToStream
+INFO: Finished encoding stream
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.handlers.Handler processRequest
+INFO: Request processed successfully
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.handlers.PersonHandler handle
+INFO: Leaving EventHandler
+
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.handlers.EventHandler handle
+INFO: Entering EventHandler
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.handlers.Handler isGetRequest
+INFO: Request method: GET
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.handlers.Handler getAuthTokenValue
+INFO: AuthToken: 
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.handlers.Handler getUriParts
+INFO: URI: /event
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.handlers.Handler processRequest
+INFO: Processing request
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.services.EventsService getEvents
+INFO: Entering EventService
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.database.Database openConnection
+INFO: Opening database connection
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.services.Service getUserByTokenValue
+WARNING: Invalid auth token
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.services.EventsService getEvents
+WARNING: EventService failed: Invalid auth token
+Nov 17, 2017 2:29:05 PM fox.glass.com.shared.json.JsonEncoder encodeToStream
+INFO: Encoding json stream
+Nov 17, 2017 2:29:05 PM fox.glass.com.shared.json.JsonEncoder encodeToStream
+INFO: Finished encoding stream
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.handlers.Handler processRequest
+INFO: Request processed successfully
+Nov 17, 2017 2:29:05 PM fox.glass.com.familyserver.handlers.EventHandler handle
+INFO: Leaving EventHandler
+
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.handlers.RegisterHandler handle
+INFO: Entering RegisterHandler
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.handlers.Handler isPostRequest
+INFO: Request method: POST
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decodeStream
+INFO: Decoding json stream
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.handlers.Handler processRequest
+INFO: Processing request
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.services.RegisterService register
+INFO: Entering RegisterService
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.database.Database openConnection
+INFO: Opening database connection
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.services.RegisterService uniqueUserName
+INFO: Checking username uniqueness
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.database.access.UserDAO getUserByUsername
+INFO: Getting user: Phineas
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.database.access.UserDAO getUserByUsername
+SEVERE: ResultSet closed
+java.sql.SQLException: ResultSet closed
+	at org.sqlite.RS.checkOpen(RS.java:63)
+	at org.sqlite.RS.markCol(RS.java:77)
+	at org.sqlite.RS.getString(RS.java:313)
+	at fox.glass.com.familyserver.database.access.UserDAO.getUserByUsername(UserDAO.java:143)
+	at fox.glass.com.familyserver.services.RegisterService.uniqueUserName(RegisterService.java:65)
+	at fox.glass.com.familyserver.services.RegisterService.register(RegisterService.java:29)
+	at fox.glass.com.familyserver.services.RegisterService.getResponse(RegisterService.java:118)
+	at fox.glass.com.familyserver.handlers.Handler.processRequest(Handler.java:117)
+	at fox.glass.com.familyserver.handlers.RegisterHandler.handle(RegisterHandler.java:23)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:79)
+	at sun.net.httpserver.AuthFilter.doFilter(AuthFilter.java:83)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:82)
+	at sun.net.httpserver.ServerImpl$Exchange$LinkHandler.handle(ServerImpl.java:675)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:79)
+	at sun.net.httpserver.ServerImpl$Exchange.run(ServerImpl.java:647)
+	at sun.net.httpserver.ServerImpl$DefaultExecutor.execute(ServerImpl.java:158)
+	at sun.net.httpserver.ServerImpl$Dispatcher.handle(ServerImpl.java:431)
+	at sun.net.httpserver.ServerImpl$Dispatcher.run(ServerImpl.java:396)
+	at java.lang.Thread.run(Thread.java:745)
+
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.services.RegisterService uniqueUserName
+INFO: getUserByUsername failed
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.services.RegisterService uniqueUserName
+INFO: Username is unique
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.database.access.UserDAO insert
+INFO: Inserting user: Phineas
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.database.access.UserDAO insert
+INFO: User inserted successfully
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: c40b3043-9dea-425b-a151-5165236eca85
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person c40b3043-9dea-425b-a151-5165236eca85 inserted successfully
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.services.RegisterService register
+INFO: New user and person inserted successfully
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.services.Service generateData
+INFO: Inserting 4 generations of random data
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.database.access.PersonDAO getPerson
+INFO: Getting person with ID: c40b3043-9dea-425b-a151-5165236eca85
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.database.access.PersonDAO getPerson
+INFO: Person retrieved successfully
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.FamilyTreeGenerator generateTree
+INFO: Entering FamilyTreeGenerator for Phineas
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: f, Phineas
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Latasha Simien
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: m, Phineas
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Santo Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: getRandomEvents for Santo Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Birth event for Santo Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Marriage event for Santo Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Death event for Santo Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Santo Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: Exiting getRandomEvents
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: f, Phineas
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Cher Simien
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: getRandomEvents for Cher Simien
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Birth event for Cher Simien
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Marriage event for Cher Simien
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Death event for Cher Simien
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Cher Simien
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: Exiting getRandomEvents
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: m, Phineas
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Scott Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: getRandomEvents for Scott Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Birth event for Scott Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Marriage event for Scott Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Death event for Scott Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Christening event for Scott Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Scott Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Baptism event for Scott Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Christening event for Scott Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: Exiting getRandomEvents
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: f, Phineas
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Sharyl Mccawley
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: getRandomEvents for Sharyl Mccawley
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Birth event for Sharyl Mccawley
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Marriage event for Sharyl Mccawley
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Death event for Sharyl Mccawley
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Baptism event for Sharyl Mccawley
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Sharyl Mccawley
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: Exiting getRandomEvents
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: m, Phineas
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Irving Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: getRandomEvents for Irving Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Birth event for Irving Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Marriage event for Irving Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Death event for Irving Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Irving Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Irving Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Irving Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Irving Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: Exiting getRandomEvents
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: f, Phineas
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Marylou Paxton
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: getRandomEvents for Marylou Paxton
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Birth event for Marylou Paxton
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Marriage event for Marylou Paxton
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Death event for Marylou Paxton
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Christening event for Marylou Paxton
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Marylou Paxton
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Marylou Paxton
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Court Record event for Marylou Paxton
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Marylou Paxton
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: Exiting getRandomEvents
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: m, Phineas
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Granville Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: getRandomEvents for Granville Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Birth event for Granville Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Marriage event for Granville Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Death event for Granville Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Granville Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Granville Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Granville Flynn
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: Exiting getRandomEvents
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: f, Phineas
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Delilah Vitagliano
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: getRandomEvents for Delilah Vitagliano
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Birth event for Delilah Vitagliano
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Marriage event for Delilah Vitagliano
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Death event for Delilah Vitagliano
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Delilah Vitagliano
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Christening event for Delilah Vitagliano
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: Exiting getRandomEvents
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: m, Phineas
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Son Paxton
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: getRandomEvents for Son Paxton
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Birth event for Son Paxton
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Marriage event for Son Paxton
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Death event for Son Paxton
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Son Paxton
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Christening event for Son Paxton
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Christening event for Son Paxton
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Son Paxton
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: Exiting getRandomEvents
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: f, Phineas
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Tiana Voris
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: getRandomEvents for Tiana Voris
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Birth event for Tiana Voris
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Marriage event for Tiana Voris
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Death event for Tiana Voris
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Tiana Voris
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Court Record event for Tiana Voris
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Tiana Voris
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Tiana Voris
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: Exiting getRandomEvents
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: m, Phineas
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Sol Mccawley
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: getRandomEvents for Sol Mccawley
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Birth event for Sol Mccawley
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Marriage event for Sol Mccawley
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Death event for Sol Mccawley
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Sol Mccawley
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Sol Mccawley
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Sol Mccawley
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Christening event for Sol Mccawley
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: Exiting getRandomEvents
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: f, Phineas
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Carin Pleasant
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: getRandomEvents for Carin Pleasant
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Birth event for Carin Pleasant
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Marriage event for Carin Pleasant
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Death event for Carin Pleasant
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Carin Pleasant
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Carin Pleasant
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Christening event for Carin Pleasant
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Carin Pleasant
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Carin Pleasant
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: Exiting getRandomEvents
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: m, Phineas
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Roosevelt Mccawley
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: getRandomEvents for Roosevelt Mccawley
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Birth event for Roosevelt Mccawley
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Marriage event for Roosevelt Mccawley
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Death event for Roosevelt Mccawley
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Roosevelt Mccawley
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Roosevelt Mccawley
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Roosevelt Mccawley
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: Exiting getRandomEvents
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: f, Phineas
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Suzanna Silverman
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: getRandomEvents for Suzanna Silverman
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Birth event for Suzanna Silverman
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Marriage event for Suzanna Silverman
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Death event for Suzanna Silverman
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Court Record event for Suzanna Silverman
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Christening event for Suzanna Silverman
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Suzanna Silverman
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: Exiting getRandomEvents
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: m, Phineas
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Willie Pleasant
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: getRandomEvents for Willie Pleasant
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Birth event for Willie Pleasant
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Marriage event for Willie Pleasant
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Death event for Willie Pleasant
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Willie Pleasant
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Willie Pleasant
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Christening event for Willie Pleasant
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Baptism event for Willie Pleasant
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Christening event for Willie Pleasant
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: Exiting getRandomEvents
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: f, Phineas
+Nov 17, 2017 2:29:19 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Wendolyn Ocheltree
+Nov 17, 2017 2:29:19 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: getRandomEvents for Wendolyn Ocheltree
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Birth event for Wendolyn Ocheltree
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Marriage event for Wendolyn Ocheltree
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Death event for Wendolyn Ocheltree
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Wendolyn Ocheltree
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: Exiting getRandomEvents
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: m, Phineas
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Irving Simien
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: getRandomEvents for Irving Simien
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Birth event for Irving Simien
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Marriage event for Irving Simien
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Death event for Irving Simien
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Irving Simien
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Irving Simien
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Irving Simien
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Irving Simien
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Christening event for Irving Simien
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: Exiting getRandomEvents
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: f, Phineas
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Leota Rule
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: getRandomEvents for Leota Rule
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Birth event for Leota Rule
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Marriage event for Leota Rule
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Death event for Leota Rule
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Court Record event for Leota Rule
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Leota Rule
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Court Record event for Leota Rule
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Christening event for Leota Rule
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: Exiting getRandomEvents
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: m, Phineas
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Abraham Simien
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: getRandomEvents for Abraham Simien
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Birth event for Abraham Simien
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Marriage event for Abraham Simien
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Death event for Abraham Simien
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Abraham Simien
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Christening event for Abraham Simien
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Abraham Simien
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: Exiting getRandomEvents
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: f, Phineas
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Deja Coachman
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: getRandomEvents for Deja Coachman
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Birth event for Deja Coachman
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Marriage event for Deja Coachman
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Death event for Deja Coachman
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Deja Coachman
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Deja Coachman
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Christening event for Deja Coachman
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: Exiting getRandomEvents
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: m, Phineas
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Roosevelt Simien
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: getRandomEvents for Roosevelt Simien
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Birth event for Roosevelt Simien
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Marriage event for Roosevelt Simien
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Death event for Roosevelt Simien
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Roosevelt Simien
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: Exiting getRandomEvents
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: f, Phineas
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Marylou Pera
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: getRandomEvents for Marylou Pera
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Birth event for Marylou Pera
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Marriage event for Marylou Pera
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Death event for Marylou Pera
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Marylou Pera
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Marylou Pera
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Marylou Pera
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Marylou Pera
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: Exiting getRandomEvents
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: m, Phineas
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Fabian Coachman
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: getRandomEvents for Fabian Coachman
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Birth event for Fabian Coachman
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Marriage event for Fabian Coachman
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Death event for Fabian Coachman
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Fabian Coachman
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Fabian Coachman
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Christening event for Fabian Coachman
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Christening event for Fabian Coachman
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: Exiting getRandomEvents
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: f, Phineas
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Shae Hellard
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: getRandomEvents for Shae Hellard
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Birth event for Shae Hellard
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Marriage event for Shae Hellard
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Death event for Shae Hellard
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Shae Hellard
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Shae Hellard
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: Exiting getRandomEvents
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: m, Phineas
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Son Rule
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: getRandomEvents for Son Rule
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Birth event for Son Rule
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Marriage event for Son Rule
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Death event for Son Rule
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Christening event for Son Rule
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Christening event for Son Rule
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: Exiting getRandomEvents
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: f, Phineas
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Leann Waechter
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: getRandomEvents for Leann Waechter
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Birth event for Leann Waechter
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Marriage event for Leann Waechter
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Death event for Leann Waechter
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Christening event for Leann Waechter
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: Exiting getRandomEvents
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: m, Phineas
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Jody Rule
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: getRandomEvents for Jody Rule
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Birth event for Jody Rule
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Marriage event for Jody Rule
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Death event for Jody Rule
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Jody Rule
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Jody Rule
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Christening event for Jody Rule
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Jody Rule
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: Exiting getRandomEvents
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: f, Phineas
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Cheryle Wilhite
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: getRandomEvents for Cheryle Wilhite
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Birth event for Cheryle Wilhite
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Marriage event for Cheryle Wilhite
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Death event for Cheryle Wilhite
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Cheryle Wilhite
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Christening event for Cheryle Wilhite
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Court Record event for Cheryle Wilhite
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Christening event for Cheryle Wilhite
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: Exiting getRandomEvents
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: m, Phineas
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Robbie Waechter
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: getRandomEvents for Robbie Waechter
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Birth event for Robbie Waechter
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Marriage event for Robbie Waechter
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Death event for Robbie Waechter
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Robbie Waechter
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Robbie Waechter
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: Exiting getRandomEvents
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: getRandomPerson: f, Phineas
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.PersonGenerator getRandomPerson
+INFO: created Person: Leonore Mccants
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: getRandomEvents for Leonore Mccants
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Birth event for Leonore Mccants
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Marriage event for Leonore Mccants
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Death event for Leonore Mccants
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Court Record event for Leonore Mccants
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonDecoder decode
+INFO: Decoding json string
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvent
+INFO: Creating Census Record event for Leonore Mccants
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.EventGenerator getRandomEvents
+INFO: Exiting getRandomEvents
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.FamilyTreeGenerator generateTree
+INFO: Finished generating persons and events
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.services.Service update
+INFO: Updating c40b3043-9dea-425b-a151-5165236eca85
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO updateIDs
+INFO: Updating IDs Phineas Flynn
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO updateIDs
+INFO: IDs for Phineas Flynn updated successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.services.Service loadPersons
+INFO: Loading persons
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: f199a5ed-f60c-4b1e-bb0a-e67e138d76e6
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person f199a5ed-f60c-4b1e-bb0a-e67e138d76e6 inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: edc7dc80-9854-4ec7-a7e3-af05517233aa
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person edc7dc80-9854-4ec7-a7e3-af05517233aa inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: 2c8fdc94-cb95-4004-b465-0741f7054885
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person 2c8fdc94-cb95-4004-b465-0741f7054885 inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: 799870a6-637e-4001-93b7-9a4f28b57b64
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person 799870a6-637e-4001-93b7-9a4f28b57b64 inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: 8105a50f-5067-4570-bf74-b125846e1adb
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person 8105a50f-5067-4570-bf74-b125846e1adb inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: d2c8ec18-65b2-4994-a449-9c012609aca2
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person d2c8ec18-65b2-4994-a449-9c012609aca2 inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: 62d90060-c488-44b9-8180-58c9bbbe9771
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person 62d90060-c488-44b9-8180-58c9bbbe9771 inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: 62357744-efc9-47e6-b1be-510fef9478ca
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person 62357744-efc9-47e6-b1be-510fef9478ca inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: b9dd6e5a-bbd6-4710-9d5f-64c5cbebd53b
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person b9dd6e5a-bbd6-4710-9d5f-64c5cbebd53b inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: 3a9e18a8-a762-4423-b27d-aec308f669f5
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person 3a9e18a8-a762-4423-b27d-aec308f669f5 inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: 80fe7a8c-1276-4ac0-bd39-0b97749ca022
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person 80fe7a8c-1276-4ac0-bd39-0b97749ca022 inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: 794ded27-c02c-4360-9094-37b137610703
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person 794ded27-c02c-4360-9094-37b137610703 inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: d06f7ea7-f407-45f8-a375-0f4a3a9cbb2a
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person d06f7ea7-f407-45f8-a375-0f4a3a9cbb2a inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: 8fd6bf61-c204-4f1a-9717-8e1e6164ffee
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person 8fd6bf61-c204-4f1a-9717-8e1e6164ffee inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: f8488e52-7a4f-43d9-9590-8de519ac3c23
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person f8488e52-7a4f-43d9-9590-8de519ac3c23 inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: 921f698f-d1c8-4f02-9305-3c141353c702
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person 921f698f-d1c8-4f02-9305-3c141353c702 inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: 494b8c51-cf81-4815-9fd1-3af0809287ce
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person 494b8c51-cf81-4815-9fd1-3af0809287ce inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: 56b740cd-7fb3-484d-9b6e-25392ee415a3
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person 56b740cd-7fb3-484d-9b6e-25392ee415a3 inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: e6a27da4-1291-4d17-89f2-79aa634e86e6
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person e6a27da4-1291-4d17-89f2-79aa634e86e6 inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: 76d6ec34-4f88-4230-a2b5-926c75904a88
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person 76d6ec34-4f88-4230-a2b5-926c75904a88 inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: 0248ae3e-a7f6-4414-9796-d6b65a6bc4f2
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person 0248ae3e-a7f6-4414-9796-d6b65a6bc4f2 inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: 59c77bac-a9c9-4d14-a66b-dbbad142ea94
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person 59c77bac-a9c9-4d14-a66b-dbbad142ea94 inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: 82d48929-0a4e-447c-a854-54b11c6956a1
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person 82d48929-0a4e-447c-a854-54b11c6956a1 inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: 8f3ff180-a468-42c6-b46a-c19f31e95a06
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person 8f3ff180-a468-42c6-b46a-c19f31e95a06 inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: ce10a737-2d1f-408a-8467-3fb45819c50f
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person ce10a737-2d1f-408a-8467-3fb45819c50f inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: cbc39e0c-d0a6-468f-98ee-5f1c7c461492
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person cbc39e0c-d0a6-468f-98ee-5f1c7c461492 inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: a2a6cca5-c2d1-4545-a5e6-8d8bfcec5ad1
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person a2a6cca5-c2d1-4545-a5e6-8d8bfcec5ad1 inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: 7a313f9e-ed40-47b1-a416-beb3498300d1
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person 7a313f9e-ed40-47b1-a416-beb3498300d1 inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: 0d80ed04-e548-44f2-bd14-1934b851eee7
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person 0d80ed04-e548-44f2-bd14-1934b851eee7 inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: a5983ff6-a5e5-4584-9ee1-a000842bac8a
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person a5983ff6-a5e5-4584-9ee1-a000842bac8a inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Inserting person: 42745c60-79e9-46e0-9f7b-9659425fc039
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO insert
+INFO: Person 42745c60-79e9-46e0-9f7b-9659425fc039 inserted successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.services.Service loadPersons
+INFO: Persons loaded successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.services.Service loadEvents
+INFO: Loading events
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.services.Service loadEvents
+INFO: Events loaded successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.services.Service generateData
+INFO: Successfully added 31 persons and 182 events to the database
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.generator.AuthTokenGenerator getAuthToken
+INFO: Generating token for f6169061-8a5c-4e82-a2ea-18b5581849fb
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.services.RegisterService register
+INFO: RegisterService completed successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonEncoder encodeToStream
+INFO: Encoding json stream
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonEncoder encodeToStream
+INFO: Finished encoding stream
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.handlers.Handler processRequest
+INFO: Request processed successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.handlers.RegisterHandler handle
+INFO: Leaving RegisterHandler
+
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.handlers.PersonHandler handle
+INFO: Entering PersonHandler
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.handlers.Handler isGetRequest
+INFO: Request method: GET
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.handlers.Handler getAuthTokenValue
+INFO: AuthToken: 6615185d-7e8b-4b59-bd3f-3ac43aeb5f04
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.handlers.Handler getUriParts
+INFO: URI: /person
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.handlers.Handler processRequest
+INFO: Processing request
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.Database openConnection
+INFO: Opening database connection
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.UserDAO getUserById
+INFO: Getting user: f6169061-8a5c-4e82-a2ea-18b5581849fb
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.UserDAO getUserById
+INFO: User f6169061-8a5c-4e82-a2ea-18b5581849fb retrieved successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO getPersonsByUsername
+INFO: Getting persons for: Phineas
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.PersonDAO getPersonsByUsername
+INFO: Persons retrieved successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.services.PeopleService getPeople
+INFO: PeopleService completed successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonEncoder encodeToStream
+INFO: Encoding json stream
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonEncoder encodeToStream
+INFO: Finished encoding stream
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.handlers.Handler processRequest
+INFO: Request processed successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.handlers.PersonHandler handle
+INFO: Leaving EventHandler
+
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.handlers.EventHandler handle
+INFO: Entering EventHandler
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.handlers.Handler isGetRequest
+INFO: Request method: GET
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.handlers.Handler getAuthTokenValue
+INFO: AuthToken: 6615185d-7e8b-4b59-bd3f-3ac43aeb5f04
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.handlers.Handler getUriParts
+INFO: URI: /event
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.handlers.Handler processRequest
+INFO: Processing request
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.services.EventsService getEvents
+INFO: Entering EventService
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.Database openConnection
+INFO: Opening database connection
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.UserDAO getUserById
+INFO: Getting user: f6169061-8a5c-4e82-a2ea-18b5581849fb
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.database.access.UserDAO getUserById
+INFO: User f6169061-8a5c-4e82-a2ea-18b5581849fb retrieved successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.services.EventsService getEvents
+INFO: EventService completed successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonEncoder encodeToStream
+INFO: Encoding json stream
+Nov 17, 2017 2:29:20 PM fox.glass.com.shared.json.JsonEncoder encodeToStream
+INFO: Finished encoding stream
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.handlers.Handler processRequest
+INFO: Request processed successfully
+Nov 17, 2017 2:29:20 PM fox.glass.com.familyserver.handlers.EventHandler handle
+INFO: Leaving EventHandler
+
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.handlers.RegisterHandler handle
+INFO: Entering RegisterHandler
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.handlers.Handler isPostRequest
+INFO: Request method: POST
+Nov 17, 2017 2:29:22 PM fox.glass.com.shared.json.JsonDecoder decodeStream
+INFO: Decoding json stream
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.handlers.Handler processRequest
+INFO: Processing request
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.services.RegisterService register
+INFO: Entering RegisterService
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.database.Database openConnection
+INFO: Opening database connection
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.services.RegisterService uniqueUserName
+INFO: Checking username uniqueness
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.database.access.UserDAO getUserByUsername
+INFO: Getting user: Phineas
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.database.access.UserDAO getUserByUsername
+INFO: User Phineas retrieved successfully
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.services.RegisterService register
+WARNING: RegisterService failed: Username already taken by another user
+Nov 17, 2017 2:29:22 PM fox.glass.com.shared.json.JsonEncoder encodeToStream
+INFO: Encoding json stream
+Nov 17, 2017 2:29:22 PM fox.glass.com.shared.json.JsonEncoder encodeToStream
+INFO: Finished encoding stream
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.handlers.Handler processRequest
+INFO: Request processed successfully
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.handlers.RegisterHandler handle
+INFO: Leaving RegisterHandler
+
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.handlers.PersonHandler handle
+INFO: Entering PersonHandler
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.handlers.Handler isGetRequest
+INFO: Request method: GET
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.handlers.Handler getAuthTokenValue
+INFO: AuthToken: 
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.handlers.Handler getUriParts
+INFO: URI: /person
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.handlers.Handler processRequest
+INFO: Processing request
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.database.Database openConnection
+INFO: Opening database connection
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.services.Service getUserByTokenValue
+WARNING: Invalid auth token
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.services.PeopleService getPeople
+WARNING: PeopleService failed: Invalid auth token
+Nov 17, 2017 2:29:22 PM fox.glass.com.shared.json.JsonEncoder encodeToStream
+INFO: Encoding json stream
+Nov 17, 2017 2:29:22 PM fox.glass.com.shared.json.JsonEncoder encodeToStream
+INFO: Finished encoding stream
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.handlers.Handler processRequest
+INFO: Request processed successfully
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.handlers.PersonHandler handle
+INFO: Leaving EventHandler
+
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.handlers.EventHandler handle
+INFO: Entering EventHandler
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.handlers.Handler isGetRequest
+INFO: Request method: GET
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.handlers.Handler getAuthTokenValue
+INFO: AuthToken: 
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.handlers.Handler getUriParts
+INFO: URI: /event
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.handlers.Handler processRequest
+INFO: Processing request
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.services.EventsService getEvents
+INFO: Entering EventService
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.database.Database openConnection
+INFO: Opening database connection
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.services.Service getUserByTokenValue
+WARNING: Invalid auth token
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.services.EventsService getEvents
+WARNING: EventService failed: Invalid auth token
+Nov 17, 2017 2:29:22 PM fox.glass.com.shared.json.JsonEncoder encodeToStream
+INFO: Encoding json stream
+Nov 17, 2017 2:29:22 PM fox.glass.com.shared.json.JsonEncoder encodeToStream
+INFO: Finished encoding stream
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.handlers.Handler processRequest
+INFO: Request processed successfully
+Nov 17, 2017 2:29:22 PM fox.glass.com.familyserver.handlers.EventHandler handle
+INFO: Leaving EventHandler
+
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.handlers.LoginHandler handle
+INFO: Entering LoginHandler
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.handlers.Handler isPostRequest
+INFO: Request method: POST
+Nov 17, 2017 2:29:35 PM fox.glass.com.shared.json.JsonDecoder decodeStream
+INFO: Decoding json stream
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.handlers.Handler processRequest
+INFO: Processing request
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.services.LoginService login
+INFO: Entering LoginService
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.database.Database openConnection
+INFO: Opening database connection
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.database.access.UserDAO login
+INFO: Entering UDAO login: Username: Phineas Password: flynn
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.generator.AuthTokenGenerator getAuthToken
+INFO: Generating token for f6169061-8a5c-4e82-a2ea-18b5581849fb
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.services.LoginService login
+INFO: Login successful
+Nov 17, 2017 2:29:35 PM fox.glass.com.shared.json.JsonEncoder encodeToStream
+INFO: Encoding json stream
+Nov 17, 2017 2:29:35 PM fox.glass.com.shared.json.JsonEncoder encodeToStream
+INFO: Finished encoding stream
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.handlers.Handler processRequest
+INFO: Request processed successfully
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.handlers.LoginHandler handle
+INFO: Leaving LoginHandler
+
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.handlers.PersonHandler handle
+INFO: Entering PersonHandler
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.handlers.Handler isGetRequest
+INFO: Request method: GET
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.handlers.Handler getAuthTokenValue
+INFO: AuthToken: 9cb43208-3e14-4974-b79e-41fc9343ce60
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.handlers.Handler getUriParts
+INFO: URI: /person
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.handlers.Handler processRequest
+INFO: Processing request
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.database.Database openConnection
+INFO: Opening database connection
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.database.access.UserDAO getUserById
+INFO: Getting user: f6169061-8a5c-4e82-a2ea-18b5581849fb
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.database.access.UserDAO getUserById
+INFO: User f6169061-8a5c-4e82-a2ea-18b5581849fb retrieved successfully
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.database.access.PersonDAO getPersonsByUsername
+INFO: Getting persons for: Phineas
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.database.access.PersonDAO getPersonsByUsername
+INFO: Persons retrieved successfully
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.services.PeopleService getPeople
+INFO: PeopleService completed successfully
+Nov 17, 2017 2:29:35 PM fox.glass.com.shared.json.JsonEncoder encodeToStream
+INFO: Encoding json stream
+Nov 17, 2017 2:29:35 PM fox.glass.com.shared.json.JsonEncoder encodeToStream
+INFO: Finished encoding stream
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.handlers.Handler processRequest
+INFO: Request processed successfully
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.handlers.PersonHandler handle
+INFO: Leaving EventHandler
+
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.handlers.EventHandler handle
+INFO: Entering EventHandler
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.handlers.Handler isGetRequest
+INFO: Request method: GET
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.handlers.Handler getAuthTokenValue
+INFO: AuthToken: 9cb43208-3e14-4974-b79e-41fc9343ce60
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.handlers.Handler getUriParts
+INFO: URI: /event
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.handlers.Handler processRequest
+INFO: Processing request
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.services.EventsService getEvents
+INFO: Entering EventService
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.database.Database openConnection
+INFO: Opening database connection
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.database.access.UserDAO getUserById
+INFO: Getting user: f6169061-8a5c-4e82-a2ea-18b5581849fb
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.database.access.UserDAO getUserById
+INFO: User f6169061-8a5c-4e82-a2ea-18b5581849fb retrieved successfully
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.services.EventsService getEvents
+INFO: EventService completed successfully
+Nov 17, 2017 2:29:35 PM fox.glass.com.shared.json.JsonEncoder encodeToStream
+INFO: Encoding json stream
+Nov 17, 2017 2:29:35 PM fox.glass.com.shared.json.JsonEncoder encodeToStream
+INFO: Finished encoding stream
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.handlers.Handler processRequest
+INFO: Request processed successfully
+Nov 17, 2017 2:29:35 PM fox.glass.com.familyserver.handlers.EventHandler handle
+INFO: Leaving EventHandler
+
